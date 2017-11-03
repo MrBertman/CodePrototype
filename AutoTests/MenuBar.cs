@@ -23,7 +23,7 @@ namespace AutoTests
         [TestInitialize]
         public void TestInit()
         {
-            application = Application.Launch(@"C:\Users\Student\Desktop\01.11\CodePrototype\CodePrototype\bin\Debug\CodePrototype");
+            application = Application.Launch(@"C:\Users\Student\Desktop\01.11\CodePrototype\CodePrototype\bin\Debug\CodePrototype.exe");
             window = application.GetWindow("FigurePainter", InitializeOption.NoCache);
             POM.Window = window;
         }
