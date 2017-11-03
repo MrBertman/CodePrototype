@@ -23,7 +23,7 @@ namespace AutoTests
         [TestMethod]
         public void Click()
         {
-            POM.MainMenu.FileMenu.Click();
+            Assert.IsTrue(POM.MainMenu.FileMenu.Enabled);
         }
 
         [ClassCleanup]
