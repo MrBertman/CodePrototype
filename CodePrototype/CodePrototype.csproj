@@ -45,14 +45,172 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="API\Empty Figure\EmptyCommand.cs" />
+    <Compile Include="API\Empty Figure\EmptyFigure.cs" />
+    <Compile Include="API\Interfaces\ICommand.cs" />
+    <Compile Include="API\Interfaces\IFigure.cs" />
+    <Compile Include="API\PluginManager.cs" />
+    <Compile Include="API\SimpleFigure\SimpleFigure.cs" />
+    <Compile Include="API\TextFigure\TextFigure.cs" />
+    <Compile Include="API\XClasses\XData.cs" />
+    <Compile Include="API\XClasses\XText.cs" />
+    <Compile Include="UI Components\DDraw.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI Components\DDraw.Designer.cs">
+      <DependentUpon>DDraw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Components\DTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI Components\DTabControl.Designer.cs">
+      <DependentUpon>DTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Components\DTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI Components\DTabPage.Designer.cs">
+      <DependentUpon>DTabPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Components\Figures\DEmptyFigure.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI Components\Figures\DEmptyFigure.Designer.cs">
+      <DependentUpon>DEmptyFigure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Components\Figures\DSimpleFigure.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI Components\Figures\DSimpleFigure.Designer.cs">
+      <DependentUpon>DSimpleFigure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="API\SimpleFigure\SimpleXCommand.cs" />
+    <Compile Include="API\TextFigure\TextFigureXCommand.cs" />
+    <Compile Include="UI Components\Figures\DTextFigure.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI Components\Figures\DTextFigure.Designer.cs">
+      <DependentUpon>DTextFigure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Components\Other Components\DElements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Components\Other Components\DElements.Designer.cs">
+      <DependentUpon>DElements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Components\Other Components\DFigureType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Components\Other Components\DFigureType.Designer.cs">
+      <DependentUpon>DFigureType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Components\Other Components\DFigureWidthColor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Components\Other Components\DFigureWidthColor.Designer.cs">
+      <DependentUpon>DFigureWidthColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Components\Other Components\DMenuBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI Components\Other Components\DMenuBar.Designer.cs">
+      <DependentUpon>DMenuBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FigurePainter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FigurePainter.Designer.cs">
+      <DependentUpon>FigurePainter.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI Components\Other Components\DSaveLoad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Components\Other Components\DSaveLoad.Designer.cs">
+      <DependentUpon>DSaveLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Components\Other Components\DText.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Components\Other Components\DText.Designer.cs">
+      <DependentUpon>DText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Components\PropertiesWindows\EmptyProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Components\PropertiesWindows\EmptyProperties.Designer.cs">
+      <DependentUpon>EmptyProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Components\PropertiesWindows\SimpleFigureProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Components\PropertiesWindows\SimpleFigureProperties.Designer.cs">
+      <DependentUpon>SimpleFigureProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Components\PropertiesWindows\TextFigureProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI Components\PropertiesWindows\TextFigureProperties.Designer.cs">
+      <DependentUpon>TextFigureProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Components\Figures\RightClickSimpleFigure.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI Components\Figures\RightClickSimpleFigure.Designer.cs">
+      <DependentUpon>RightClickSimpleFigure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Components\ToolBars\DToolBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI Components\ToolBars\DToolBar.Designer.cs">
+      <DependentUpon>DToolBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Components\ToolBars\DToolBarFigure.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI Components\ToolBars\DToolBarFigure.Designer.cs">
+      <DependentUpon>DToolBarFigure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Components\ToolBars\DToolBarSimpleFigure.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI Components\ToolBars\DToolBarSimpleFigure.Designer.cs">
+      <DependentUpon>DToolBarSimpleFigure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Components\ToolBars\DToolBarTextFigure.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI Components\ToolBars\DToolBarTextFigure.Designer.cs">
+      <DependentUpon>DToolBarTextFigure.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI Components\DDraw.resx">
+      <DependentUpon>DDraw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Components\Figures\DEmptyFigure.resx">
+      <DependentUpon>DEmptyFigure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Components\Figures\DSimpleFigure.resx">
+      <DependentUpon>DSimpleFigure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Components\Figures\DTextFigure.resx">
+      <DependentUpon>DTextFigure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Components\Other Components\DElements.resx">
+      <DependentUpon>DElements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Components\Other Components\DFigureType.resx">
+      <DependentUpon>DFigureType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Components\Other Components\DFigureWidthColor.resx">
+      <DependentUpon>DFigureWidthColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Components\Other Components\DMenuBar.resx">
+      <DependentUpon>DMenuBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FigurePainter.resx">
+      <DependentUpon>FigurePainter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -61,7 +219,38 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI Components\Other Components\DSaveLoad.resx">
+      <DependentUpon>DSaveLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Components\Other Components\DText.resx">
+      <DependentUpon>DText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Components\PropertiesWindows\EmptyProperties.resx">
+      <DependentUpon>EmptyProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Components\PropertiesWindows\SimpleFigureProperties.resx">
+      <DependentUpon>SimpleFigureProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Components\PropertiesWindows\TextFigureProperties.resx">
+      <DependentUpon>TextFigureProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Components\Figures\RightClickSimpleFigure.resx">
+      <DependentUpon>RightClickSimpleFigure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Components\ToolBars\DToolBar.resx">
+      <DependentUpon>DToolBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Components\ToolBars\DToolBarFigure.resx">
+      <DependentUpon>DToolBarFigure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Components\ToolBars\DToolBarSimpleFigure.resx">
+      <DependentUpon>DToolBarSimpleFigure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI Components\ToolBars\DToolBarTextFigure.resx">
+      <DependentUpon>DToolBarTextFigure.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -74,6 +263,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SimpleFigure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FigureWithText.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FigureWithImage.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
