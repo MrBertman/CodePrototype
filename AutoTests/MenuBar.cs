@@ -10,11 +10,12 @@ namespace AutoTests
     public class MenuBar
     {
         static Window window = null;
+        static Application application = null;
 
         [ClassInitialize]
         public static void ClassInit(TestContext t)
         {
-            Application application = Application.Launch(@"C:\Users\Student\Desktop\01.11\CodePrototype\CodePrototype\bin\Debug\CodePrototype");
+            application = Application.Launch(@"C:\Users\Student\Desktop\01.11\CodePrototype\CodePrototype\bin\Debug\CodePrototype");
             window = application.GetWindow("FigurePainter", InitializeOption.NoCache);
             POM.Window = window;
         }
@@ -23,6 +24,12 @@ namespace AutoTests
         public void Click()
         {
             POM.MainMenu.FileMenu.Click();
+        }
+
+        [ClassCleanup]
+        public static void ClassClean()
+        {
+            application.Close();    
         }
     }
 }
