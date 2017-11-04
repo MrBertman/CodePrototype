@@ -3,6 +3,7 @@ using TestStack.White.Factory;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TestStack.White.UIItems.WindowItems;
 using UnitTests;
+using System.Diagnostics;
 
 namespace AutoTests
 {
@@ -23,7 +24,10 @@ namespace AutoTests
         [TestInitialize]
         public void TestInit()
         {
-            application = Application.Launch(@"C:\Users\Student\Desktop\01.11\CodePrototype\CodePrototype\bin\Debug\CodePrototype.exe");
+            application = Application.Launch(new ProcessStartInfo(@"CodePrototype.exe")
+            {
+                WorkingDirectory = @"..\..\..\CodePrototype\bin\Debug\",
+            });
             window = application.GetWindow("FigurePainter", InitializeOption.NoCache);
             POM.Window = window;
         }
