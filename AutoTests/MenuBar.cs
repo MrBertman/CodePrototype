@@ -33,13 +33,20 @@ namespace AutoTests
         }
 
         [TestMethod]
-        public void Click()
+        public void Exist()
         {
             Assert.IsTrue(POM.MainMenu.FileMenu.Enabled);
         }
 
-        [ClassCleanup]
-        public static void ClassClean()
+        [TestMethod]
+        public void Click()
+        {
+            POM.MainMenu.FileMenu.Click();
+            Assert.IsTrue(true);
+        }
+
+        [TestCleanup]
+        public void TestClean()
         {
             application.Close();    
         }
